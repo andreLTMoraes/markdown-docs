@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="./app/logo.png" alt="MD Docs" width="240" />
+<img src="./public/logo.png" alt="MD Docs" width="240" />
 <br><br>
 MD Docs
 </h1>
@@ -9,5 +9,4 @@ MD Docs
 ## Recursos
 [//]: # (Add the features of your project here:)
 
-- <img src="https://nextjs.org/favicon.ico" width="16"> **Next.js** — Uma biblioteca que prove uma forma de criar apps nativas para Android e iOS.
-- <img src="https://react.dev/favicon-32x32.png" width="16"> **React** - Plataforma para criação de aplicações nativas universais para Android,iOS e web com javascript e React.
+- <img src="https://nextjs.org/favicon.ico" width="16"> **Next.js** — Framework de desenvolvimento front-end React de código aberto criada pela Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicações web baseados em React.
