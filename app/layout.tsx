@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-gray-300 dark:bg-gray-900`}>
         <UpBar/>
         <Navigation/>
         <div className="lg:pl-[19.5rem]">
