@@ -17,11 +17,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-gray-300 dark:bg-gray-900">
       <body className={`${inter.className} bg-gray-300 dark:bg-gray-900`}>
         <UpBar/>
         <Navigation/>
-        <div className="lg:pl-[19.5rem]">
+        <div className="
+          lg:pl-[20rem]
+          xl:pl-[35rem]
+        ">
           {children}
         </div>
       </body>

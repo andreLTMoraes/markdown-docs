@@ -55,31 +55,25 @@ const buildTree = (rootPath: string, level?: number) => {
 
 const BuildMenu = (props: Props, level?: number) => {
     const nodes = buildTree(props.rootPath, level);
+    const h5Style = `mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200`;
     console.log(`Nível ${level} - Tem ${nodes.length} filhos.`);
+
     return (
         <>{
         nodes.map((child) => {
             return (
                     child.isFolder ?
                     <li className={`${child.level == 1 && "mt-12 lg:mt-8"}`} key={child.title}>
-                        {child.children.some((chld) => chld.title == "README.md")?
-                            <h5 className={
-                                `mb-8
-                                lg:mb-3
-                                ${child.level == 2 && "pl-2"}
-                                font-semibold 
-                                text-slate-900
-                                dark:text-slate-200
+                        {child.children.some((chld) => chld.title == "README.mdx")?
+                            <h5 className={`
+                                    ${child.level == 2 && "pl-2"}
+                                    ${h5Style}
                                 `}>
                                 <a href="#">{child.title}</a>
                             </h5> :
-                            <h5 className={
-                                `mb-8
-                                lg:mb-3
-                                ${child.level == 2 && "pl-2"}
-                                font-semibold 
-                                text-slate-900 
-                                dark:text-slate-200
+                            <h5 className={`
+                                    ${child.level == 2 && "pl-2"}
+                                    ${h5Style}
                                 `}>
                                 {child.title}</h5>
                         }
@@ -92,7 +86,7 @@ const BuildMenu = (props: Props, level?: number) => {
                         </ul>
                     </li>
                     :
-                    child.title == "README.md" ? 
+                    child.title == "README.mdx" ? 
                     <></> :
                     <li key={child.title}>
                         <a className={
