@@ -80,7 +80,7 @@ const BuildMenu = (props: Props, level?: number) => {
                         <ul className={
                             `space-y-6 
                             lg:space-y-2 
-                            ${child.level == 1 && "border-l border-slate-100 dark:border-slate-800"}
+                            ${child.level == 1 && "border-l border-slate-400 dark:border-slate-800"}
                             `}>
                             {BuildMenu({rootPath:child.path}, child.level)}
                         </ul>
@@ -96,7 +96,7 @@ const BuildMenu = (props: Props, level?: number) => {
                             pl-4 
                             -ml-px 
                             border-transparent 
-                            hover:border-slate-400 
+                            hover:border-slate-900 
                             dark:hover:border-slate-500 
                             text-slate-700 
                             hover:text-slate-900 
