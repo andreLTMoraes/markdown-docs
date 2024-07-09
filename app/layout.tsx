@@ -5,6 +5,7 @@ import "./globals.css";
 import UpBar from "./components/UpBar";
 import Navigation from "./components/Navigation";
 import ThemeProvider from "./providers/Theme";
+import NavigationProvider from "./providers/Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,11 +29,13 @@ export default function RootLayout({
             attribute="class"
             defaultTheme="system"
           >
-            <UpBar/>
-            <div className="flex px-4 sm:px-6 md:px-8 lg:px-64 bg-gray-300 dark:bg-gray-900">
-              <Navigation/>
-              {children}
-            </div>
+            <NavigationProvider>
+              <UpBar/>
+              <div className="flex px-4 sm:px-6 md:px-8 2xl:px-56 bg-green-light dark:bg-green-dark">
+                <Navigation/>
+                {children}
+              </div>
+            </NavigationProvider>
           </ThemeProvider>
         </body>
       </html>
